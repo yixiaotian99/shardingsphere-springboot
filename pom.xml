@@ -16,6 +16,8 @@
         <module>sp-table</module>
         <module>sp-db</module>
         <module>sp-db-table</module>
+        <module>read-write</module>
+        <module>global-table</module>
     </modules>
 
     <properties>
