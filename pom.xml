@@ -14,6 +14,7 @@
 
     <modules>
         <module>sp-table</module>
+        <module>sp-db</module>
     </modules>
 
     <properties>
