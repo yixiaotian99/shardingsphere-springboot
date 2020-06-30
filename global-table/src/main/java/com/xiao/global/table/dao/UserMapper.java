@@ -1,17 +1,17 @@
-package com.xiao.sp.db.dao;
+package com.xiao.global.table.dao;
 
+import com.xiao.global.table.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.xiao.sp.db.entity.Order;
 import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 /**
- * 水平分库订单表(Order)表数据库访问层
+ * 全局用户表(User)表数据库访问层
  *
  * @author sunjinwei
- * @since 2020-06-30 20:45:51
+ * @since 2020-06-30 21:36:13
  */
-public interface OrderMapper extends BaseMapper<Order> {
+public interface UserMapper extends BaseMapper<User> {
 
     /**
      * 通过ID查询单条数据
@@ -19,7 +19,7 @@ public interface OrderMapper extends BaseMapper<Order> {
      * @param id 主键
      * @return 实例对象
      */
-    Order queryById(Long id);
+    User queryById(Long id);
 
     /**
      * 查询指定行数据
@@ -28,32 +28,32 @@ public interface OrderMapper extends BaseMapper<Order> {
      * @param limit 查询条数
      * @return 对象列表
      */
-    List<Order> queryAllByLimit(@Param("offset") int offset, @Param("limit") int limit);
+    List<User> queryAllByLimit(@Param("offset") int offset, @Param("limit") int limit);
 
 
     /**
      * 通过实体作为筛选条件查询
      *
-     * @param order 实例对象
+     * @param user 实例对象
      * @return 对象列表
      */
-    List<Order> queryAll(Order order);
+    List<User> queryAll(User user);
 
     /**
      * 新增数据
      *
-     * @param order 实例对象
+     * @param user 实例对象
      * @return 影响行数
      */
-    int insert(Order order);
+    int insert(User user);
 
     /**
      * 修改数据
      *
-     * @param order 实例对象
+     * @param user 实例对象
      * @return 影响行数
      */
-    int update(Order order);
+    int update(User user);
 
     /**
      * 通过主键删除数据

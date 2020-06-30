@@ -1,15 +1,17 @@
 package com.xiao.sp.db.entity;
 
 import java.io.Serializable;
+import com.baomidou.mybatisplus.annotation.TableName;
 
 /**
  * 水平分库订单表(Order)实体类
  *
  * @author sunjinwei
- * @since 2020-06-30 20:45:51
+ * @since 2020-06-30 21:33:50
  */
+@TableName("t_order")
 public class Order implements Serializable {
-    private static final long serialVersionUID = -75151982431923287L;
+    private static final long serialVersionUID = -29145612446013509L;
     
     private Long id;
     /**

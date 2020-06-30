@@ -1,16 +1,15 @@
-package com.xiao.sp.db.service;
+package com.xiao.global.table.service;
 
-import com.xiao.sp.db.entity.Order;
-
+import com.xiao.global.table.entity.User;
 import java.util.List;
 
 /**
- * 水平分库订单表(Order)表服务接口
+ * 全局用户表(User)表服务接口
  *
  * @author sunjinwei
- * @since 2020-06-30 20:45:51
+ * @since 2020-06-30 21:36:13
  */
-public interface OrderService {
+public interface UserService {
 
     /**
      * 通过ID查询单条数据
@@ -18,7 +17,7 @@ public interface OrderService {
      * @param id 主键
      * @return 实例对象
      */
-    Order queryById(Long id);
+    User queryById(Long id);
 
     /**
      * 查询多条数据
@@ -27,23 +26,23 @@ public interface OrderService {
      * @param limit 查询条数
      * @return 对象列表
      */
-    List<Order> queryAllByLimit(int offset, int limit);
+    List<User> queryAllByLimit(int offset, int limit);
 
     /**
      * 新增数据
      *
-     * @param order 实例对象
+     * @param user 实例对象
      * @return 实例对象
      */
-    Order insert(Order order);
+    User insert(User user);
 
     /**
      * 修改数据
      *
-     * @param order 实例对象
+     * @param user 实例对象
      * @return 实例对象
      */
-    Order update(Order order);
+    User update(User user);
 
     /**
      * 通过主键删除数据

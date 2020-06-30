@@ -1,5 +1,7 @@
 package com.xiao.sp.db.table.entity;
 
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 
 /**
@@ -8,6 +10,7 @@ import java.io.Serializable;
  * @author sunjinwei
  * @since 2020-06-30 21:08:21
  */
+@TableName("t_company")
 public class Company implements Serializable {
     private static final long serialVersionUID = 220094260027913216L;
     

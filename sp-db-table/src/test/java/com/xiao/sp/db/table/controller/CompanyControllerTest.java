@@ -1,6 +1,7 @@
 package com.xiao.sp.db.table.controller;
 
 import cn.hutool.core.util.RandomUtil;
+import cn.hutool.json.JSONUtil;
 import com.xiao.sp.db.table.dao.CompanyMapper;
 import com.xiao.sp.db.table.entity.Company;
 import org.junit.jupiter.api.Test;
@@ -38,5 +39,9 @@ class CompanyControllerTest {
 
     @Test
     void select() {
+
+        Company company = companyMapper.selectById(484834419392118784L);
+
+        System.out.println(JSONUtil.toJsonStr(company));
     }
 }

@@ -1,10 +1,14 @@
 package com.xiao.sp.db.controller;
 
+import cn.hutool.json.JSONUtil;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.xiao.sp.db.dao.OrderMapper;
 import com.xiao.sp.db.entity.Order;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.List;
 
 /**
  * @Author sunjinwei
@@ -35,5 +39,12 @@ class OrderControllerTest {
 
     @Test
     void select() {
+
+        QueryWrapper<Order>  wrapper = new QueryWrapper<>();
+        wrapper.eq("id", 484830259812761601L);
+
+        List<Order> orders = orderMapper.selectList(wrapper);
+        System.out.println(JSONUtil.toJsonStr(orders));
+
     }
 }
